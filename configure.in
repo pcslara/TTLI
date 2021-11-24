@@ -1,0 +1,15 @@
+AC_INIT([ttli], [1.0.0])
+
+AM_CONFIG_HEADER(config.h)
+AM_INIT_AUTOMAKE(ttli,1.0.0)
+
+AC_PROG_CC
+
+AC_CHECK_HEADER(string.h, ,AC_MSG_ERROR())
+AC_CHECK_HEADER(stdlib.h, ,AC_MSG_ERROR())
+AC_CHECK_HEADER(unistd.h, ,AC_MSG_ERROR())
+AC_CHECK_HEADER(stdio.h,  ,AC_MSG_ERROR())
+AC_CHECK_HEADER(assert.h, ,AC_MSG_ERROR())
+AC_CHECK_HEADER(termios.h,,AC_MSG_ERROR())
+
+AC_OUTPUT(Makefile)
